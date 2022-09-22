@@ -36,3 +36,10 @@ def sum67(nums):
     numbers_between += sum(nums[i:][nums[i:].index(6):nums[i:].index(7) + 1:])
     i = nums.index(7, i) + 1
   return sum(nums) - numbers_between
+
+"""Given an array of ints, return True if the array contains a 2 next to a 2 somewhere."""
+def has22(nums):
+  for i in range(len(nums) - 1):
+    if nums[i] == 2 and nums[i + 1] == 2:
+      return True
+  return False
